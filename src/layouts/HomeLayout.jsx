@@ -12,8 +12,10 @@ const HomeLayout = () => {
                
             </nav>
         
+           
+            <Outlet ></Outlet>
             
-            <Outlet></Outlet>
+            
             <footer></footer>
         </div>
     );

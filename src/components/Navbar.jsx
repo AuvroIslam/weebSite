@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import "./navbar.css";
 import { AuthContext } from '../provider/AuthProvider'; 
+import momo from '../assets/momo.jpg';
 
 const Navbar = () => {
     const { user,logout } = useContext(AuthContext);
     const navlinks = [
-        <NavLink to="/" className="px-4 py-2" key="home">Home</NavLink>,
-        <NavLink to="/top-manga" className="px-4 py-2" key="top-manga">Top Manga</NavLink>,
-        <NavLink to="/top-anime" className="px-4 py-2" key="top-anime">Top Anime</NavLink>
+        <NavLink to="/" className="px-2 mx-1 py-2  rounded-xl hover:border-2 hover:border-[#66D2CE] text-[#2DAA9E]" key="home">Home</NavLink>,
+        <NavLink to="/top-manga" className="px-2 mx-1 py-2 rounded-xl hover:border-2 hover:border-[#66D2CE] text-[#2DAA9E]" key="top-manga">Top Manga</NavLink>,
+        <NavLink to="/top-anime" className="px-2 mx-1 py-2 rounded-xl hover:border-2 hover:border-[#66D2CE] text-[#2DAA9E]" key="top-anime">Top Anime</NavLink>
     ];
 
     return (
@@ -25,7 +26,8 @@ const Navbar = () => {
                             {navlinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">MomoMetSushi</a>
+                    <a className="btn btn-ghost text-xl text-[#2DAA9E]">MomoMetSushi</a>
+                    <img src={momo} alt="" className='w-12'/>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -33,9 +35,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {user && <button className='btn' onClick={logout}>log out</button>}
-                    {!user && <button className='btn'><Link to="/login">log in</Link></button>}
-                    {user && <p className='text-black ml-4'>Welcome {user.email}</p>}
+                    {user && <button className='btn rounded-xl border-2 border-[#66D2CE] text-[#2DAA9E] hover:text-black hover:bg-[#66D2CE]' onClick={logout}>log out</button>}
+                    {!user && <button className='btn rounded-xl border-2 border-[#66D2CE] text-[#2DAA9E] hover:text-black hover:bg-[#66D2CE]'><Link to="/login">log in</Link></button>}
+                    {user && <p className='text-[#2DAA9E] underline underline-[#2DAA9E] ml-4'>Welcome {user.email.split('@')[0]}</p>}
                 </div>
             </div>
         </div>

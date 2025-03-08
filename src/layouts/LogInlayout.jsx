@@ -48,7 +48,7 @@ const LogInlayout = () => {
             src={sushi} 
             className="mx-auto w-30" 
           />
-          <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="mt-10 text-center text-2xl font-bold tracking-tight text-[#2DAA9E]">
             Sign in to your account
           </h2>
         </div>
@@ -64,7 +64,7 @@ const LogInlayout = () => {
             <div>
               <label 
                 htmlFor="email" 
-                className="block text-sm font-medium text-gray-900"
+                className="block text-sm font-bold text-[#2DAA9E]"
               >
                 Email address
               </label>
@@ -75,7 +75,7 @@ const LogInlayout = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#66D2CE] sm:text-sm"
                 />
               </div>
             </div>
@@ -84,14 +84,14 @@ const LogInlayout = () => {
               <div className="flex items-center justify-between">
                 <label 
                   htmlFor="password" 
-                  className="block text-sm font-medium text-gray-900"
+                  className="block text-sm font-bold text-[#2DAA9E]"
                 >
                   Password
                 </label>
                 <div className="text-sm">
                   <a 
                     href="#" 
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
+                    className="font-semibold text-[#2DAA9E] hover:font-bold"
                   >
                     Forgot password?
                   </a>
@@ -104,7 +104,7 @@ const LogInlayout = () => {
                   type="password"
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-[#66D2CE] sm:text-sm"
                 />
               </div>
             </div>
@@ -113,7 +113,7 @@ const LogInlayout = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50"
+                className="flex w-full justify-center rounded-md  px-3 py-1.5 text-sm font-semibold border-2 border-[#66D2CE] text-[#2DAA9E] hover:text-black hover:bg-[#66D2CE]"
               >
                 {loading ? 'Signing in...' : 'Sign in'}
               </button>
@@ -124,7 +124,7 @@ const LogInlayout = () => {
             Not a member?{' '}
             <NavLink 
               to="/register" 
-              className="font-semibold text-indigo-600 hover:text-indigo-500"
+              className="font-semibold text-[#2DAA9E] hover:font-bold"
             >
               Sign up
             </NavLink>
