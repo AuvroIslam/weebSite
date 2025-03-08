@@ -37,7 +37,8 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {user && <button className='btn rounded-xl border-2 border-[#66D2CE] text-[#2DAA9E] hover:text-black hover:bg-[#66D2CE]' onClick={logout}>log out</button>}
                     {!user && <button className='btn rounded-xl border-2 border-[#66D2CE] text-[#2DAA9E] hover:text-black hover:bg-[#66D2CE]'><Link to="/login">log in</Link></button>}
-                    {user && <p className='text-[#2DAA9E] underline underline-[#2DAA9E] ml-4'>Welcome {user.email.split('@')[0]}</p>}
+                    {user && <p className='text-[#2DAA9E] underline underline-[#2DAA9E] ml-4'>
+                        Welcome {user.displayName || 'User'}</p>}
                 </div>
             </div>
         </div>
