@@ -1,4 +1,4 @@
-# 🌸 WeebSite – Your Anime List Companion
+#  WeebSite – Your Anime List Companion
 
 **WeebSite** is a web application inspired by **MyAnimeList**, where users can browse anime details using the [Jikan API](https://jikan.moe/), sign in with Firebase Authentication, and enjoy a clean, modern interface.
 
